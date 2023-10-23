@@ -5,15 +5,16 @@ from fastapi import Response
 
 sio_client = socketio.AsyncClient()
 
-
 @sio_client.event
 async def connect():
     print('I\'m connected as', sio_client.sid)
+    # join_room request
     await sio_client.emit('session_request', {'session_id': sio_client.sid})
 
 
 @sio_client.event
 async def session_confirm(room_id):
+    """Server informs which room this client has joined"""
     print("Joined room:", room_id)
 
 
@@ -36,8 +37,8 @@ async def bot_uttered(data):
 
 
 async def main():
-    # await sio_client.connect(url='http://0.0.0.0:8000', socketio_path='/chatbot/socket.io')
-    await sio_client.connect(url='http://0.0.0.0:5005', socketio_path='socket.io', transports=['websocket'])
+    await sio_client.connect(url='http://0.0.0.0:8000', socketio_path='/chatbot/socket.io')
+    # await sio_client.connect(url='http://0.0.0.0:5005', socketio_path='socket.io', transports=['websocket'])
 
     message = "Hello" # 1st message
     data = {"session_id": sio_client.sid, "message": message}
