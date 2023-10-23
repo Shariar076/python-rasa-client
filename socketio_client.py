@@ -8,7 +8,7 @@ sio_client = socketio.AsyncClient()
 @sio_client.event
 async def connect():
     print('I\'m connected as', sio_client.sid)
-    # join_room request
+    # join_room request: the client chooses a room
     await sio_client.emit('session_request', {'session_id': sio_client.sid})
 
 
