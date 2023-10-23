@@ -37,8 +37,8 @@ async def bot_uttered(data):
 
 
 async def main():
-    await sio_client.connect(url='http://0.0.0.0:8000', socketio_path='/chatbot/socket.io')
-    # await sio_client.connect(url='http://0.0.0.0:5005', socketio_path='socket.io', transports=['websocket'])
+    # await sio_client.connect(url='http://0.0.0.0:8000', socketio_path='/chatbot/socket.io')
+    await sio_client.connect(url='http://0.0.0.0:5005', socketio_path='socket.io', transports=['websocket'])
 
     message = "Hello" # 1st message
     data = {"session_id": sio_client.sid, "message": message}
