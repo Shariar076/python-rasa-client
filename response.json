@@ -1,0 +1,40 @@
+{
+    "text": "আপনার একাউন্ট এর ধরন কি?",
+    "quick_replies": [
+        {
+            "content_type": "text",
+            "title": "Savings",
+            "payload": "আমার একাউনন্টের ধরন Savings"
+        },
+        {
+            "content_type": "text",
+            "title": "Current Deposit",
+            "payload": "আমার একাউনন্টের ধরন Current Deposit"
+        },
+        {
+            "content_type": "text",
+            "title": "Special Noticed Deposit",
+            "payload": "আমার একাউনন্টের ধরন Special Noticed Deposit"
+        },
+        {
+            "content_type": "text",
+            "title": "Fixed Deposit",
+            "payload": "আমার একাউনন্টের ধরন Fixed Deposit"
+        },
+        {
+            "content_type": "text",
+            "title": "ABS",
+            "payload": "আমার একাউনন্টের ধরন ABS"
+        },
+        {
+            "content_type": "text",
+            "title": "APS",
+            "payload": "আমার একাউনন্টের ধরন APS"
+        },
+        {
+            "content_type": "text",
+            "title": "Education Scheme",
+            "payload": "আমার একাউনন্টের ধরন Education Scheme"
+        }
+    ]
+}
